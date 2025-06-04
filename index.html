@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HODL Kong - 8-Bit Game</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    body {
+      background: #111 url('assets/background.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #game-ui {
+      font-family: 'Press Start 2P', monospace;
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    #game-ui div {
+      margin-bottom: 6px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@waxio/waxjs@2.1.3/dist/waxjs.min.js"></script>
+</head>
+<body>
+
+  <!-- UI HUD -->
+  <div id="game-ui">
+    <div>Score: <span id="score">0</span></div>
+    <div>Level: <span id="level">1</span></div>
+    <div>Lives: <span id="lives">3</span></div>
+    <div>Music: <button id="toggleMusic">🔊 On</button></div>
+    <div><button id="loginBtn">🔐 Login with WAX Wallet</button></div>
+    <div id="walletStatus">Not connected</div>
+  </div>
+
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Game Logic -->
+  <script src="main.js"></script>
+</body>
+</html>
